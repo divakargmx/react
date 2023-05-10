@@ -114,7 +114,7 @@ export const info = {
         },
         {
             title: "Vizag Page",
-            live: "https://vizag.tk",
+            live: "https://www.vizag.tk",
             source: "https://github.com/",
             image: mock2
         },
