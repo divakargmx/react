@@ -17,8 +17,7 @@ const links = [
         active: 'about'
     },
     {
-        name: info.initials,
-        type: 'initials',
+        name: 'Wakar',
         to: '/',
         active: 'home'
     },
