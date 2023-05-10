@@ -116,13 +116,13 @@ export const info = {
             title: "Vizag Page",
             live: "https://vizag.tk",
             source: "https://github.com/",
-            image: mock2
+            image: mock3
         },
         {
             title: "Divakar",
             live: "https://divakar.vercel.app",
             source: "https://github.com/",
-            image: mock3
+            image: mock2
         },
         {
             title: "Project 4",
