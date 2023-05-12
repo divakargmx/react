@@ -125,14 +125,14 @@ export const info = {
             image: mock3
         },
         {
-            title: "Project 4",
-            live: "https://paytonpierce.dev",
+            title: "Back Ground Remover",
+            live: "https://thewakar-bgremoval.streamlit.app/",
             source: "https://github.com/",
             image: mock4
         },
         {
-            title: "Project 5",
-            live: "https://paytonpierce.dev",
+            title: "Demo",
+            live: "https://thewakar-ewkozn.streamlit.app/",
             source: "https://github.com/",
             image: mock5
         }
