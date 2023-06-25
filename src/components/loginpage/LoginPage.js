@@ -1,34 +1,77 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Dashboard = () => {
-  const [userData, setUserData] = useState(null);
+const LoginPage = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const history = useHistory();
 
-  // Function to handle logout
-  const handleLogout = () => {
-    // Perform logout logic, such as clearing access token from local storage or state
-    // Redirect to the login page
-    history.push('/LoginPage.js');
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
   };
 
-  // Fetch user data on component mount or whenever necessary
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:BPMn1_6B/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
+
+      if (response.ok) {
+        // Login successful
+        // Fetch user data
+        const userDataResponse = await fetch('/auth/me', {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${accessToken}`, // Add your access token here
+          },
+        });
+
+        if (userDataResponse.ok) {
+          const userData = await userDataResponse.json();
+          // Store user data in state or global context if needed
+          // Redirect to the dashboard route
+          history.push('/dashboard');
+        } else {
+          // Handle fetching user data failure
+        }
+      } else {
+        // Handle login failure
+        // Display error message or take appropriate action
+      }
+    } catch (error) {
+      // Handle network or other errors
+    }
+  };
 
   return (
     <div>
-      <h2>Welcome to the Dashboard!</h2>
-      {userData ? (
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
         <div>
-          <p>Username: {userData.username}</p>
-          <p>Email: {userData.email}</p>
-          {/* Display other user information as needed */}
-          <button onClick={handleLogout}>Logout</button>
+          <label>Username:</label>
+          <input type="text" value={username} onChange={handleUsernameChange} />
         </div>
-      ) : (
-        <p>Loading user data...</p>
-      )}
+        <div>
+          <label>Password:</label>
+          <input type="password" value={password} onChange={handlePasswordChange} />
+        </div>
+        <button type="submit">Login</button>
+      </form>
     </div>
   );
 };
 
-export default Dashboard;
+export default LoginPage;
