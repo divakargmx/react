@@ -26,6 +26,12 @@ const links = [
         to: '/portfolio',
         active: 'portfolio'
     }
+    
+    {
+        name: 'LoginPage',
+        to: '/loginpage',
+        active: 'loginpage'
+    }
 ]
 
 export default function Navbar({darkMode, handleClick}) {
