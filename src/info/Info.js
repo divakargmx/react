@@ -108,7 +108,7 @@ export const info = {
     portfolio: [ // This is where your portfolio projects will be detailed
         {
             title: "Wakar Automation",
-            live: "https://kiran.bespecial.ml", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
+            live: "https://thewakar.github.io/kiran/", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
             source: "https://github.com/", // this should be a link to the **repository** of the project, where the code is hosted.
             image: mock1
         },
