@@ -139,13 +139,13 @@ export const info = {
             image: mock5
         },
         {
-            title: "Login Page using GS",
+            title: "Shoping Cart",
             live: "https://divakargmx.github.io/CRUD/",
             source: "https://github.com/",
             image: mock6
         },        
         {
-            title: "Shoping Cart",
+            title: "Login Page using GS",
             live: "https://wakarecart.vercel.app/",
             source: "https://github.com/",
             image: mock7
