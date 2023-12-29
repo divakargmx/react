@@ -137,18 +137,19 @@ export const info = {
             live: "https://thewakar-ewkozn.streamlit.app/",
             source: "https://github.com/",
             image: mock5
-        },
-        {
-            title: "Shoping Cart",
-            live: "https://divakargmx.github.io/CRUD/",
-            source: "https://github.com/",
-            image: mock6
         },        
         {
             title: "Login Page using GS",
             live: "https://wakarecart.vercel.app/",
             source: "https://github.com/",
             image: mock7
+        },
+        
+        {
+            title: "Shoping Cart",
+            live: "https://divakargmx.github.io/CRUD/",
+            source: "https://github.com/",
+            image: mock6
         }
         
     ]
