@@ -140,14 +140,14 @@ export const info = {
         },        
         {
             title: "Login Page using GS",
-            live: "https://wakarecart.vercel.app/",
+            live: "https://divakargmx.github.io/CRUD/",
             source: "https://github.com/",
             image: mock7
         },
         
         {
             title: "Shoping Cart",
-            live: "https://divakargmx.github.io/CRUD/",
+            live: "https://wakarecart.vercel.app/",
             source: "https://github.com/",
             image: mock6
         }
